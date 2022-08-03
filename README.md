@@ -1,19 +1,22 @@
 ===Purpose===
+
 The purpose off script is to automatization of Jira tickets creation basing on last scan's reports.
 
 ===Data & Workflow===
 
-SAS API URLS
-SAS POST ENDLESS TOKEN(YOU MUST USE WITH TEMPORARY TOKEN OF THIS USER FIRST): http://<sas-ip>/app/api/v1/user/token/endless; to body(x-www-form-urlencoded: password <xxxx>)
-SAS API ROOT: http://<sas-ip>/app/api/v1
-SAS GET ALL PROJECTS: <root>/projects
-SAS POST START SCAN: <root>/scan/start
-SAS GET LAST SCAN DETAILS: <root>/projects/filtered
-SAS POST SCAN'S REPORT ZIP: <root>/report/file
-SAS POST CREATE JIRA TASK: <root>/jira/task
-SAS GET ISSUE'S JIRA TASKS: <root>/issues/<issue-id>/jira/tasks
-SAS GET ALL SCAN'S ISSUES WITH MEDIUM&HIGH LEVELS: <root>/scans/<sas_scan_uuid>/vulnerabilities/filtered
-Temlates for POST
+- SAS API URLS
+- SAS POST ENDLESS TOKEN(YOU MUST USE WITH TEMPORARY TOKEN OF THIS USER FIRST): http://<sas-ip>/app/api/v1/user/token/endless; to body(x-www-form-urlencoded: password <xxxx>)
+- SAS API ROOT: http://<sas-ip>/app/api/v1
+- SAS GET ALL PROJECTS: <root>/projects
+- SAS POST START SCAN: <root>/scan/start
+- SAS GET LAST SCAN DETAILS: <root>/projects/filtered
+- SAS POST SCAN'S REPORT ZIP: <root>/report/file
+- SAS POST CREATE JIRA TASK: <root>/jira/task
+- SAS GET ISSUE'S JIRA TASKS: <root>/issues/<issue-id>/jira/tasks
+- SAS GET ALL SCAN'S ISSUES WITH MEDIUM&HIGH LEVELS: <root>/scans/<sas_scan_uuid>/vulnerabilities/filtered
+
+===Temlates for POST===
+	
 Create Jira Task via SAS Template:
 
 ```
