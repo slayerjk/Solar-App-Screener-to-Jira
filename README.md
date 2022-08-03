@@ -15,7 +15,7 @@ The purpose off script is to automatization of Jira tickets creation basing on l
 - SAS GET ISSUE'S JIRA TASKS: <root>/issues/<issue-id>/jira/tasks
 - SAS GET ALL SCAN'S ISSUES WITH MEDIUM&HIGH LEVELS: <root>/scans/<sas_scan_uuid>/vulnerabilities/filtered
 
-===Temlates for POST===
+===Templates for POST===
 	
 Create Jira Task via SAS Template:
 
@@ -33,8 +33,6 @@ Create Jira Task via SAS Template:
     "configuration": "{\"summary\":\"$summary\",\"issuetype\":\"$issuetype\",\"project\":\"$project\",\"description\":\"$description\",\"priority\":\"$priority\"}"
 }
 ```
-
-===Temlates for POST===
 
 **Create Jira Task via SAS Template**:
 ```
@@ -148,4 +146,4 @@ Create Jira Task via SAS Template:
 }
 ```
 
-  - Start new scan, using Solar AppScreener(SAS) API()
+Also you'll need "sas-api-token.txt" file in sas_files folder.
