@@ -148,7 +148,7 @@ Create Jira Task via SAS Template:
 	
 ===All neccessary files and folders===
 
-Script checs following:
+Script checks following:
 ```
 # Script dir
 work_dir = '<your-path>'
