@@ -145,5 +145,28 @@ Create Jira Task via SAS Template:
     }
 }
 ```
+	
+===All neccessary files and folders===
 
-Also you'll need "sas-api-token.txt" file in sas_files folder.
+Script checs following:
+```
+# Script dir
+work_dir = '<your-path>'
+
+### DEFINING SOLARAPPSCREENER(SAS) FOLDERS ###
+sas_files_dir = work_dir+'/sas_files'
+temp_files_dir = work_dir+'/temp_files'
+sas_reports = sas_files_dir+'/reports'
+sas_json_templates = sas_files_dir+'/json-templates'
+
+### DEFINING FILES VARIABLES ###
+sas_api_token_file = sas_files_dir+'/sas-api-token.txt'
+sas_download_csv_report_json_template = sas_json_templates+'/sas_download-csv-report_template.txt'
+sas_report_zip = sas_reports+'/report'+'_'+str(jira_date_format)+'.zip'
+jira_task_template = sas_json_templates+'/jira-task-template.json'
+
+### TEMPORARY FILES(WILL BE DELETED AT THE END) ###
+sas_download_csv_report_json_query = temp_files_dir+'/sas_download_csv_report_json_query'
+jira_create_new_task = temp_files_dir+'/jira-task-query.json'	
+```
+
